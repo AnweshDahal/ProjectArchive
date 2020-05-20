@@ -72,6 +72,7 @@ def update_project(id):
         "HTML": len(Projects.query.filter_by(programming_lang="HTML").all())
     }
     return render_template('addProject.html', language=languages, title="Add Project", form=projectForm)
+    
 @app.route('/dcmnt@rchv-a+pr0j£t', methods = ['GET','POST'])
 def add_project():
     projectForm = ProjectForm()
