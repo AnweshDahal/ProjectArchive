@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div class="download-links">
+        {% for project in projects %}
+        <div class="download-card">
+            <span class="download-title">{{ project.project_name }}</span>
+            <span class="download-link">
+                <a href="{{ project.github }}" class="download btn blue white-text">Download</a>
+            </span>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock content %}

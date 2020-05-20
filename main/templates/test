@@ -1,0 +1,35 @@
+
+<!-- {% for tag_title, tag_value in project.tags.items() %}
+                        <div class="tag">
+                            <div class="tag-title">
+                                <p>{{ tag_title }}</p>
+                            </div>
+                            {% if tag_title == "version" %}
+                                <div class="tag-value tangerine">
+                                    <p>{{ tag_value }}</p>
+                                </div>
+                            {% elif tag_title == "language" %}
+                                <div class="tag-value green">
+                                    <p>{{ tag_value }}</p>
+                                </div>
+                            {% elif tag_title == "dependency" %}
+                                <div class="tag-value blue">
+                                    <p>{{ tag_value }}</p>
+                                </div>
+                            {% elif tag_title == "markup" %}
+                                <div class="tag-value neon">
+                                    html
+                                </div>
+                            {% elif tag_title == "script" %}
+                                <div class="tag-value green">
+                                    javascript
+                                </div>
+                            {% elif tag_title == "style" %}
+                                <div class="tag-value outrun">
+                                    sass
+                                </div>
+                            {% endif %}
+                        </div>
+                    {% endfor %} -->
+
+                    

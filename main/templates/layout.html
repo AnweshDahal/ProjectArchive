@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Project Archive - {{ title }}</title>
+</head>
+
+<body class="matrix-image">
+    <div class="container-main">
+        <div class="header">
+            <div class="thin-nav-bar">
+                <a href="{{ url_for('home') }}" class="link">Home</a>
+                <a href="{{ url_for('downloads') }}" class="link">Downloads</a>
+                <a href="{{ url_for('contacts') }}" class="link">Contact</a>
+            </div>
+            <div class="container-small">
+                <div class="box-left">
+                    <img src="{{ url_for('static', filename='Logo3.png') }}" alt=""> <span class="brand-logo">Project Archive</span>
+                </div>
+            </div>
+        </div>
+        <div class="contents">
+            <div class="container">
+                {% block content %}{% endblock %}
+                
+            </div>
+            <div class="sideNav">
+                <ul>
+                    {% for key, element in language.items() %}
+                        <li>
+                            <a href="#!">{{ key }}</a> <span class="badge">{{ element }}</span>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer class="container">
+        2020 Anwesh Dahal
+    </footer>
+</body>
+
+</html>

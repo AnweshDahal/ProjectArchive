@@ -1,0 +1,35 @@
+fieldset{
+    border: #aaaaaa solid 1px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+legend{
+    font-size: 24px;
+}
+
+.form-group{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    .btn{
+        padding: 5px;
+        width: 70px;
+        font-size: 18px;
+    }
+}
+
+.input-group{
+    margin: 10px;
+    display: flex;
+    height: 32px;
+    .form-control-label{
+        width: 40%;
+    }
+    .form-control{
+        border: #aaaaaa solid 1px;
+        border-radius: 5px;
+        padding: 3px;
+        width: 250px;
+    }
+}

@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+{% block content %}
+<!-- Cards to show the info of the projects -->
+    {% for project in projects %}
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">
+                    {{ project.project_name }}
+                </h2>
+                <span class="date">{{ project.date_published }}</span>
+                <div class="tags">
+                    <div class="tag">
+                        <div class="tag-title">
+                            version
+                        </div>
+                        <div class="tag-value tangerine">
+                            {{ project.version }}
+                        </div>
+                    </div>
+                    {% if project.language != "" %}
+                    <div class="tag">
+                        <div class="tag-title">
+                            language
+                        </div>
+                        <div class="tag-value green">
+                            {{ project.language }}
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% if project.dependency != "" %}
+                    <div class="tag">
+                        <div class="tag-title">
+                            dependency
+                        </div>
+                        <div class="tag-value blue">
+                            {{ project.dependency }}
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% if project.markup != "" %}
+                    <div class="tag">
+                        <div class="tag-title">
+                            markup
+                        </div>
+                        <div class="tag-value neon">
+                            {{ project.markup }}
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% if project.script != "" %}
+                    <div class="tag">
+                        <div class="tag-title">
+                            script
+                        </div>
+                        <div class="tag-value green">
+                            {{ project.script }}
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% if project.style != "" %}
+                    <div class="tag">
+                        <div class="tag-title">
+                            style
+                        </div>
+                        <div class="tag-value outrun">
+                            {{ project.outrun }}
+                        </div>
+                    </div>
+                    {% endif %}
+                    
+                </div>
+                <br>
+                <hr>
+                <div class="card-action">
+                    <a href="{{ project.github }}">Go To Project</a>
+                </div>
+            </div>
+        </div>
+    {% endfor  %}
+
+{% endblock content %}
